@@ -25,7 +25,7 @@ export default function Home() {
           <Row>
             <Col sm={12}>
               <h1>
-                Hey there <span role="img" aria-label="wave" id="wave">👋</span>
+                Hi there <span role="img" aria-label="wave" id="wave">👋</span>
               </h1> <br/>
               <h1>
                 I’m Maharsh. <br/> 
