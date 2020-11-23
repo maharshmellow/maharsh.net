@@ -1,0 +1,113 @@
+@font-face {
+    font-family: 'euclid';
+    font-weight: 500;
+    src: url('/fonts/euclid-circular-A/EuclidCircularA-Medium-WebXL.woff2') format('woff2'), /* Super Modern Browsers */
+         url('/fonts/euclid-circular-A/EuclidCircularA-Medium-WebXL.woff') format('woff'); /* Pretty Modern Browsers */
+}
+
+@font-face {
+    font-family: 'euclid';
+    font-weight: 600;
+    src: url('/fonts/euclid-circular-A/EuclidCircularA-Semibold-WebXL.woff2') format('woff2'), /* Super Modern Browsers */
+         url('/fonts/euclid-circular-A/EuclidCircularA-Semibold-WebXL.woff') format('woff'); /* Pretty Modern Browsers */
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "euclid", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif;
+
+    h1 {
+        font-size: 50px;
+        font-weight: 600;
+        line-height: 1.0em;
+        letter-spacing: -0.05em;
+        margin-top: 20px;
+
+        @media screen and (max-width: 576px) {
+            font-size: 44px;
+        }
+    }
+
+    .container {
+        width: 80vw;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    
+    // navbar 
+    .navbar-wrapper {
+        .navbar {
+            .logo {
+                font-weight: 700;
+                font-size: 1.4em;
+    
+                @media screen and (max-width: 576px) {
+                    font-size: 1.1em;
+                }
+            }
+            padding: 0 !important;
+    
+            .nav-link {
+                padding-right: 0 !important;
+                padding-left: 25px !important;
+                font-size: 1.0em;
+                text-align: center;
+                font-weight: 300;
+                color: black;
+    
+                &:hover {
+                    color: black;
+                }
+    
+                @media screen and (max-width: 576px) {
+                    font-size: 0.8em;
+                }
+            }
+            
+            .navbar-toggler {
+                border: none !important;
+                padding: 0 !important;
+                font-size: 14px !important;
+                outline: 0 !important;
+            }
+    
+            @media screen and (max-width: 576px) {
+                .nav-link {
+                    padding-left: 0px !important;
+                }
+            }
+        }
+    }
+
+    .welcome-message-wrapper {
+        margin-top: 20vh;
+
+        #wave {
+            animation-name: wave-animation;
+            animation-duration: 2.0s;
+            animation-iteration-count: infinite;
+            transform-origin: 70% 70%;
+            display: inline-block;
+        }    
+
+        @keyframes wave-animation {
+            0% { transform: rotate(  0.0deg) }
+            10% { transform: rotate(-15.0deg) }
+            20% { transform: rotate( 12.0deg) }
+            30% { transform: rotate(-15.0deg) }
+            40% { transform: rotate(  9.0deg) }
+            50% { transform: rotate(  0.0deg) }
+            100% { transform: rotate(  0.0deg) }
+        }
+        
+        @media screen and (max-width: 576px) {
+            // if the message takes up the entire height on a mobile device
+            // then the animation for the tiled sections will be very delayed
+            // since it won't start until the user scrolls down
+            font-size: 2.0em;
+        }     
+    }
+}
+                
