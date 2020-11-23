@@ -21,7 +21,7 @@ body {
     h1 {
         font-size: 50px;
         font-weight: 600;
-        line-height: 1.0em;
+        line-height: 1.1em;
         letter-spacing: -0.05em;
         margin-top: 20px;
 
@@ -38,9 +38,10 @@ body {
     
     // navbar 
     .navbar-wrapper {
+        margin-top: 20px;
         .navbar {
             .logo {
-                font-weight: 700;
+                font-weight: 600;
                 font-size: 1.4em;
     
                 @media screen and (max-width: 576px) {
@@ -54,23 +55,25 @@ body {
                 padding-left: 25px !important;
                 font-size: 1.0em;
                 text-align: center;
-                font-weight: 300;
                 color: black;
     
                 &:hover {
                     color: black;
                 }
-    
-                @media screen and (max-width: 576px) {
-                    font-size: 0.8em;
-                }
             }
+
+            
             
             .navbar-toggler {
                 border: none !important;
                 padding: 0 !important;
                 font-size: 14px !important;
                 outline: 0 !important;
+                color: black;
+
+                .navbar-toggler-icon {
+                    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='29' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+                }
             }
     
             @media screen and (max-width: 576px) {
