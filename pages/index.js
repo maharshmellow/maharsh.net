@@ -6,9 +6,9 @@ import Col from "react-bootstrap/Col";
 
 export default function Home() {
   return (
-    <div className="container">
+    <div className="base-container" fluid={true}>
       <Head>
-        <title>Maharsh Patel - Software Engineer</title>
+        <title>Maharsh - Software Engineer</title>
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="viewport"
@@ -21,9 +21,9 @@ export default function Home() {
       </header>
 
       <main>
-        <Container className="welcome-message-wrapper" fluid={true}>
-          <Row>
-            <Col sm={12}>
+        <Container fluid={true}>
+          <Row className="welcome-message-wrapper">
+            <Col>
               <h1>
                 Hi there <span role="img" aria-label="wave" id="wave">👋</span>
               </h1> <br/>
@@ -32,6 +32,31 @@ export default function Home() {
                 A Software Engineer based in <br/> 
                 Edmonton, Canada <br/>
               </h1>
+            </Col>
+          </Row>
+
+          <Row className="projects-wrapper">
+            <Col>
+              <h2>Projects</h2>
+
+              <Row className="project">
+                <Col>
+                  <img className="project-image" src="https://via.placeholder.com/2000x1000"></img>
+                  <h3>Inhale</h3>
+                </Col>
+              </Row>
+              <Row className="project">
+                <Col>
+                  <img className="project-image" src="https://via.placeholder.com/2000x1000"></img>
+                  <h3>Castroom</h3>
+                </Col>
+              </Row>
+              <Row className="project">
+                <Col>
+                  <img className="project-image" src="https://via.placeholder.com/2000x1000"></img>
+                  <h3>Mozilla FL/DP</h3>
+                </Col>
+              </Row>
             </Col>
           </Row>
         </Container>
