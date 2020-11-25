@@ -41,20 +41,20 @@ export default function Home() {
 
               <Row className="project">
                 <Col>
-                  <img className="project-image" src="https://via.placeholder.com/2000x1000"></img>
+                  <img className="project-image" src="/images/projects/inhale/main-cover.png"></img>
                   <h3>Inhale</h3>
                 </Col>
               </Row>
               <Row className="project">
                 <Col>
-                  <img className="project-image" src="https://via.placeholder.com/2000x1000"></img>
+                  <img className="project-image" src="/images/projects/castroom/main-cover.png"></img>
                   <h3>Castroom</h3>
                 </Col>
               </Row>
               <Row className="project">
                 <Col>
-                  <img className="project-image" src="https://via.placeholder.com/2000x1000"></img>
-                  <h3>Mozilla FL/DP</h3>
+                  <img className="project-image" src="/images/projects/inhale/inhale-cover-3.png"></img>
+                  <h3>Federated Learning Research for Mozilla</h3>
                 </Col>
               </Row>
             </Col>
