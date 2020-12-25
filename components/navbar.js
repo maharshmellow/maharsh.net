@@ -1,5 +1,5 @@
 import Container from "react-bootstrap/Container";
-import { default as BSNavbar} from "react-bootstrap/Navbar";
+import { default as BSNavbar } from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 
 export default function Navbar({ children, home }) {
