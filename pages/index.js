@@ -1,4 +1,5 @@
-import Head from "next/head"
+import Head from "next/head";
+import Link from "next/link";
 import NavBar from "../components/navbar"
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -42,13 +43,17 @@ export default function Home() {
               <Row className="project">
                 <Col>
                   {/* TODO: switch to the next.js Image component */}
-                  <img className="project-image" src="/images/projects/castroom/main-cover.png"></img>
+                  <Link href={"/projects/castroom"}>
+                    <img className="project-image" src="/images/projects/castroom/main-cover.png"></img>
+                  </Link>
                   <h3>Castroom</h3>
                 </Col>
               </Row>
               <Row className="project">
                 <Col>
-                  <img className="project-image" src="/images/projects/inhale/main-cover2.png"></img>
+                  <Link href={"/projects/inhale"}>
+                    <img className="project-image" src="/images/projects/inhale/main-cover2.png"></img>
+                  </Link>
                   <h3>Inhale</h3>
                 </Col>
               </Row>
