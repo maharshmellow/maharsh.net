@@ -1,10 +1,9 @@
-import Container from "react-bootstrap/Container";
 import { default as BSNavbar } from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 
 export default function Navbar() {
   return(
-    <Container className="navbar-wrapper" fluid={true}>
+    <div className="navbar-wrapper">
       <BSNavbar collapseOnSelect expand="sm">
         <BSNavbar.Brand className="logo">maharsh.</BSNavbar.Brand>
         <BSNavbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -17,6 +16,6 @@ export default function Navbar() {
           </Nav>
         </BSNavbar.Collapse>
       </BSNavbar>
-    </Container>
+    </div>
   )
 }

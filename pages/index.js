@@ -1,7 +1,4 @@
-import Head from "next/head";
 import Link from "next/link";
-import NavBar from "../components/navbar"
-import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Layout from "../components/layout";
@@ -9,8 +6,7 @@ import Layout from "../components/layout";
 export default function Home() {
   return (
     <Layout>
-      <main>
-        <Container fluid={true}>
+        <main>
           <Row className="welcome-message-wrapper">
             <Col>
               <h1>
@@ -53,9 +49,8 @@ export default function Home() {
               </Row> */}
             </Col>
           </Row>
-        </Container>
-
-      </main>
+        </main>
+      
     </Layout>
   )
 }
