@@ -4,23 +4,11 @@ import NavBar from "../components/navbar"
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Layout from "../components/layout";
 
 export default function Home() {
   return (
-    <div className="base-container" fluid={true}>
-      <Head>
-        <title>Maharsh - Software Engineer</title>
-        <link rel="icon" href="/favicon.ico" />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
-      </Head>
-
-      <header>
-        <NavBar />
-      </header>
-
+    <Layout>
       <main>
         <Container fluid={true}>
           <Row className="welcome-message-wrapper">
@@ -68,6 +56,6 @@ export default function Home() {
         </Container>
 
       </main>
-    </div>
+    </Layout>
   )
 }
