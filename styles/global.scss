@@ -102,6 +102,7 @@ body {
 
     pre {
         margin-top: 20px;
+        margin-bottom: 40px;
         padding: 20px;
         background-color: #F0F0F0;
 
@@ -210,12 +211,13 @@ body {
         margin-left: auto;
         padding-bottom: 5em;
 
-        p, li, a {
+        p,li,a,em,
+        .yellow-card {
             font-family: "Inter", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif;
             color: #2E2E2E;
-            line-height: 23px;
+            line-height: 160%;
+            letter-spacing: 0px;
         }
-
 
         a {
             color: #1966ff;
@@ -229,7 +231,7 @@ body {
 
         .project-banner {
             min-height: 40vh;
-            margin-top: 30vh;
+            margin-top: 20vh;
             margin-bottom: 10vh;
             
             .project-cover {
@@ -241,6 +243,18 @@ body {
             margin-top: 20px;
             margin-bottom: 20px;
             max-width: 100%;
+        }
+
+        // for image wrapper
+        table {
+            text-align: center;
+            width: 100%;
+        }
+
+        // for image caption
+        table > tbody > tr > td > em {
+            font-size: 12px;
+            color: grey;
         }
 
         @media screen and (min-width: 576px) {

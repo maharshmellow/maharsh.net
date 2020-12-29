@@ -1,8 +1,8 @@
 import renderToString from "next-mdx-remote/render-to-string";
 import hydrate from "next-mdx-remote/hydrate";
 import matter from "gray-matter";
-import { getAllProjectIds, getProjectData } from '../../lib/projects'
-import Layout from '../../components/layout'
+import { getAllProjectIds, getProjectData } from '../../lib/projects';
+import Layout from '../../components/layout';
 
 const components = {};
 
@@ -45,12 +45,8 @@ export default function Project({ source, frontMatter }) {
               <img className="project-cover" src={`${frontMatter.cover}`}/>
             : null
           }
-          {/* <div className="project-metadata">
-            Maharsh Patel, December 19, 2020
-          </div> */}
         </div>
         
-
         <div className="project-content">
           {content}
         </div>
