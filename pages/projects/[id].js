@@ -2,10 +2,9 @@ import renderToString from "next-mdx-remote/render-to-string";
 import hydrate from "next-mdx-remote/hydrate";
 import matter from "gray-matter";
 import { getAllProjectIds, getProjectData } from '../../lib/projects'
-import NavBar from "../../components/navbar"
 import Layout from '../../components/layout'
 
-const components = {NavBar};
+const components = {};
 
 // gets the list of all valid paths (IDs of each post)
 export async function getStaticPaths() {
