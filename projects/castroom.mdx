@@ -24,7 +24,7 @@ The source code is split into 3 different folders that represent the 3 different
 ### Discovery 
 Discovery manages the "discovery" of podcasts. This occurs by scouring the iTunes directory for all available podcasts. The crawl job starts [here](https://podcasts.apple.com/us/genre/podcasts-arts/id1301) and does a giant BFS operation using multiple workers and Amazon SQS. 
 
-Finding all the link that need to be crawled is done using a regex operation. This will crawl all the podcast links, page numbers, category links. It also enables the crawling of different locale links so podcasts in other languages and regions can be crawled too. (But because of the simple index problem mentioned in the notes above, there is no easy way to search for them)
+Finding all the link that need to be crawled is done using a regex operation. This will crawl all the podcast links, page numbers, and category links. It also enables the crawling of different locale links so podcasts in other languages and regions can be crawled too. (But because of the simple index problem mentioned in the notes above, there is no easy way to search for them)
 ```javascript
     let clickableUrls = data.match(/https:\/\/podcasts.apple.com\/\w{2}\/((genre\/[^/]+?-[^/]+?\/id\d{4}(\?letter=.(&amp;page=\d\d?#page)?)?)|podcast\/(([^/]+?-){0,100}([^/]+?)\/id\d{0,12})(?="))/g);
 ```
