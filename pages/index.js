@@ -30,7 +30,7 @@ export default function Home() {
                   <Link href={"/projects/castroom"}>
                     <img className="project-image" src="/images/projects/castroom/main-cover.png"></img>
                   </Link>
-                  <h3>Castroom</h3>
+                  <h4>Castroom</h4>
                 </Col>
               </Row>
               <Row className="project">
@@ -38,13 +38,13 @@ export default function Home() {
                   <Link href={"/projects/inhale"}>
                     <img className="project-image" src="/images/projects/inhale/main-cover2.png"></img>
                   </Link>
-                  <h3>Inhale</h3>
+                  <h4>Inhale</h4>
                 </Col>
               </Row>
               {/* <Row className="project">
                 <Col>
                   <img className="project-image" src="/images/projects/inhale/inhale-cover-3.png"></img>
-                  <h3>Federated Learning Research for Mozilla</h3>
+                  <h4>Federated Learning Research for Mozilla</h4>
                 </Col>
               </Row> */}
             </Col>

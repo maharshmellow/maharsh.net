@@ -38,8 +38,8 @@ export default function Project({ source, frontMatter }) {
 
   return (
     <Layout>
-      <article>
-        <h1>{frontMatter.title}</h1> 
+      <article className="project-page">
+        <h1 className="project-title">{frontMatter.title}</h1> 
         <div>{content}</div>
       </article>
     </Layout>
