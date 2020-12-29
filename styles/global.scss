@@ -101,7 +101,7 @@ body {
     }
 
     pre {
-        margin-top: 40px;
+        margin-top: 20px;
         padding: 20px;
         background-color: #F0F0F0;
 
@@ -227,24 +227,25 @@ body {
             }
         }
 
-        .project-title {
+        .project-banner {
+            min-height: 40vh;
             margin-top: 30vh;
-            margin-bottom: 30vh;
+            margin-bottom: 10vh;
+            
+            .project-cover {
+                margin-top: 5vh;
+            }
         }
 
         img {
             margin-top: 20px;
+            margin-bottom: 20px;
             max-width: 100%;
-        }
-
-        @media screen and (max-width: 576px) {
-            width: unset;
-            max-width: unset;
         }
 
         @media screen and (min-width: 576px) {
             width: 60vw;
-            max-width: 60vw;
+            max-width: 700px;
         }
     }
 

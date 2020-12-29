@@ -38,8 +38,22 @@ export default function Project({ source, frontMatter }) {
   return (
     <Layout>
       <article className="project-page">
-        <h1 className="project-title">{frontMatter.title}</h1> 
-        <div>{content}</div>
+        <div className="project-banner">
+          <h1 className="project-title">{frontMatter.title}</h1> 
+          {
+            frontMatter.cover ?
+              <img className="project-cover" src={`${frontMatter.cover}`}/>
+            : null
+          }
+          {/* <div className="project-metadata">
+            Maharsh Patel, December 19, 2020
+          </div> */}
+        </div>
+        
+
+        <div className="project-content">
+          {content}
+        </div>
       </article>
     </Layout>
   )
