@@ -20,23 +20,13 @@ The source code is split into 3 different folders that represent the 3 different
 2. [api](https://github.com/castroom/castroom/tree/master/api)
 3. [web](https://github.com/castroom/castroom/tree/master/web) 
 
+
 ### Discovery 
 Discovery manages the "discovery" of podcasts. This occurs by scouring the iTunes directory for all available podcasts. The crawl job starts [here](https://podcasts.apple.com/us/genre/podcasts-arts/id1301) and does a giant BFS operation using multiple workers and Amazon SQS. 
 
 Finding all the link that need to be crawled is done using a regex operation. This will crawl all the podcast links, page numbers, category links. It also enables the crawling of different locale links so podcasts in other languages and regions can be crawled too. (But because of the simple index problem mentioned in the notes above, there is no easy way to search for them)
 ```javascript
-static getCrawlableUrls(data, currentUrl) {
     let clickableUrls = data.match(/https:\/\/podcasts.apple.com\/\w{2}\/((genre\/[^/]+?-[^/]+?\/id\d{4}(\?letter=.(&amp;page=\d\d?#page)?)?)|podcast\/(([^/]+?-){0,100}([^/]+?)\/id\d{0,12})(?="))/g);
-
-    if (clickableUrls && clickableUrls.length >= 0) {
-        // prevent the link back to this page from being processed again
-        clickableUrls = clickableUrls.filter((item) => item !== currentUrl);
-
-        return Array.from(new Set(clickableUrls));
-    }
-
-    return [];
-}
 ```
 
 The `discovery` folder is further split into `master` and `crawler`. The `crawler` represents the collection of jobs that do the actual crawling for podcasts. A worker node picks up a URL from the queue, visits it, calls iTunes API to get the associated metadata, and then adds all the remaining links to the back of the queue for later processing. It sends all the data gathered to the `master` node which keeps track of the visited links so there isn't a cycle during processing. The `master` node maintains a simple key-value store using LevelDB and also takes care of pushing final data to an Amazon Elasticsearch instance for searching. 
@@ -55,6 +45,8 @@ The Web folder contains a React app that is shown to the users at [castroom.web.
 |:--:| 
 | *UI for the podcast details on castroom.web.app* |
 
+## Putting it together 
+![Architecture Diagram](/images/projects/castroom/architecture.png)
 
 ## Technologies 
 - Google Kubernetes Engine
