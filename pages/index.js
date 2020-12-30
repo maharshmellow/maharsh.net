@@ -24,29 +24,25 @@ export default function Home() {
             <Col>
               <h2>Projects</h2>
 
-              <Row className="project">
-                <Col>
-                  {/* TODO: switch to the next.js Image component */}
-                  <Link href={"/projects/castroom"}>
+              <Link href={"/projects/castroom"}>
+                <Row className="project">
+                  <Col>
+                    {/* TODO: switch to the next.js Image component */}
                     <img className="project-image" src="/images/projects/castroom/main-cover.png"></img>
-                  </Link>
-                  <h4>Castroom</h4>
-                </Col>
-              </Row>
-              <Row className="project">
-                <Col>
-                  <Link href={"/projects/inhale"}>
+                    <h4>Castroom</h4>
+                  </Col>
+                </Row>
+              </Link>
+              
+              <Link href={"/projects/inhale"}>
+                <Row className="project">
+                  <Col>
                     <img className="project-image" src="/images/projects/inhale/main-cover.png"></img>
-                  </Link>
-                  <h4>Inhale</h4>
-                </Col>
-              </Row>
-              {/* <Row className="project">
-                <Col>
-                  <img className="project-image" src="/images/projects/inhale/inhale-cover-3.png"></img>
-                  <h4>Federated Learning Research for Mozilla</h4>
-                </Col>
-              </Row> */}
+                    <h4>Inhale</h4>
+                  </Col>
+                </Row>
+              </Link>
+              
             </Col>
           </Row>
 

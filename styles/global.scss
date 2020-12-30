@@ -136,7 +136,7 @@ body {
                 text-align: center;
                 color: black;
                 font-weight: 500;
-                margin-top: 2px;
+                margin-top: 4px;
     
                 &:hover {
                     color: black;
@@ -191,6 +191,7 @@ body {
 
         .project {
             margin-top: 50px;
+            cursor: pointer;
 
             .project-image {
                 width: 100%;
