@@ -26,7 +26,7 @@ Discovery manages the "discovery" of podcasts. This occurs by scouring the iTune
 
 Finding all the link that need to be crawled is done using a regex operation. This will crawl all the podcast links, page numbers, and category links. It also enables the crawling of different locale links so podcasts in other languages and regions can be crawled too. (But because of the simple index problem mentioned in the notes above, there is no easy way to search for them)
 ```javascript
-    let clickableUrls = data.match(/https:\/\/podcasts.apple.com\/\w{2}\/((genre\/[^/]+?-[^/]+?\/id\d{4}(\?letter=.(&amp;page=\d\d?#page)?)?)|podcast\/(([^/]+?-){0,100}([^/]+?)\/id\d{0,12})(?="))/g);
+let clickableUrls = data.match(/https:\/\/podcasts.apple.com\/\w{2}\/((genre\/[^/]+?-[^/]+?\/id\d{4}(\?letter=.(&amp;page=\d\d?#page)?)?)|podcast\/(([^/]+?-){0,100}([^/]+?)\/id\d{0,12})(?="))/g);
 ```
 
 The `discovery` folder is further split into `master` and `crawler`. The `crawler` represents the collection of jobs that do the actual crawling for podcasts. A worker node picks up a URL from the queue, visits it, calls iTunes API to get the associated metadata, and then adds all the remaining links to the back of the queue for later processing. It sends all the data gathered to the `master` node which keeps track of the visited links so there isn't a cycle during processing. The `master` node maintains a simple key-value store using LevelDB and also takes care of pushing final data to an Amazon Elasticsearch instance for searching. 
@@ -61,7 +61,7 @@ The Web folder contains a React app that is shown to the users at [castroom.web.
 - Datadog
 
 ## Further Improvements 
-Elasticsearch is really powerful, but to get it to work like expected, there is a lot of work and ongoing maintenance required. Using the hosted AWS Elasticsearch Service helped with most of this but it was still too heavy for this project. I later found [Meilisearch](https://github.com/meilisearch/MeiliSearch) and [Typesense](https://github.com/typesense/typesense). Both of these focus on creating a search solution for user-faced applications and are much faster at this task than a vanilla Elasticsearch setup. They are both also more lightweight, and therefore, cheaper to host. 
+Elasticsearch is really powerful, but to get it to work like expected, there is a lot of work and ongoing maintenance required. Using the hosted AWS Elasticsearch Service helped with most of this but it was still too heavy for this project. I later found [MeiliSearch](https://github.com/meilisearch/MeiliSearch) and [Typesense](https://github.com/typesense/typesense). Both of these focus on creating a search solution for user-faced applications and are much faster at this task than a vanilla Elasticsearch setup. They are both also more lightweight, and therefore, cheaper to host. 
 
 ## Links
 
