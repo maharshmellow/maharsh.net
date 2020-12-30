@@ -44,7 +44,7 @@ export default function Work({ source, frontMatter }) {
           <h1 className="title">{frontMatter.title}</h1> 
           {
             frontMatter.cover ?
-              <img className="coverImage" src={`${frontMatter.cover}`}/>
+              <img className="coverImage" src={`${frontMatter.cover}`} alt="Cover image" />
             : null
           }
         </div>

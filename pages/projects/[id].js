@@ -45,7 +45,7 @@ export default function Project({ source, frontMatter }) {
           <h1 className="title">{frontMatter.title}</h1> 
           {
             frontMatter.cover ?
-              <img className="coverImage" src={`${frontMatter.cover}`}/>
+              <img className="coverImage" src={`${frontMatter.cover}`} alt="Cover Image"/>
             : null
           }
         </div>
