@@ -3,29 +3,24 @@ import NavBar from "../components/navbar"
 import Container from "react-bootstrap/Container";
 
 export const siteTitle = "Maharsh Patel - Software Engineer"
+export const siteDescription = "Software Engineer, Serial Hobbyist, Minimalist"
 
-export default function Layout({ children, home }) {
+export default function Layout({ children, home, title, description }) {
   return (
     <div className="base-container">
       <Container fluid={true}>
         <Head>
-          <title>{siteTitle}</title>
+          <title>{title || siteTitle}</title>
+          <meta name="og:title" content={title || siteTitle} />
+          <meta name="twitter:title" content={title || siteTitle} />
           <link rel="icon" href="/favicon.ico" />
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no"
-          />
-          <meta
-            name="description"
-            content="TODO: Add a description here"
-          />
-          <meta
-            property="og:image"
-            content={`https://og-image.now.sh/${encodeURI(
-              siteTitle
-            )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
-          />
-          <meta name="og:title" content={siteTitle} />
+          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+          <meta name="description" content={description || siteDescription} />
+          <meta name="og:description" content={description || siteDescription} />
+          <meta name="twitter:description" content={description || siteDescription} />
+          <meta name="og:type" content="website" />
+          <meta property="og:image" content="/images/banner.png" />
+          <meta property="twitter:image" content="/images/banner.png" />
           <meta name="twitter:card" content="summary_large_image" />
         </Head>
         <header>

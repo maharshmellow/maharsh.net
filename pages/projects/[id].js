@@ -36,7 +36,10 @@ export default function Project({ source, frontMatter }) {
   const content = hydrate(source, { components });
 
   return (
-    <Layout>
+    <Layout 
+      title={`Maharsh Patel - ${frontMatter.title}`}
+      description={frontMatter.description}>
+
       <article className="page">
         <div className="banner">
           <h1 className="title">{frontMatter.title}</h1> 
