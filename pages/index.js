@@ -76,7 +76,7 @@ export default function Home() {
                 <Row className="work-experience">
                   <Col>
                     <h4>University of Alberta</h4>
-                    <span className="job-title">3 Positions</span>
+                    <span className="job-title">Summer Research Intern</span>
                   </Col>
                 </Row>
               </Link>
