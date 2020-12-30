@@ -13,7 +13,7 @@ export default function Layout({ children, home, title, description }) {
           <title>{title || siteTitle}</title>
           <meta name="og:title" content={title || siteTitle} />
           <meta name="twitter:title" content={title || siteTitle} />
-          <link rel="icon" href="/favicon.ico" />
+          <link rel="icon" type="image/png" href="/images/favicon.png" />
           <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
           <meta name="description" content={description || siteDescription} />
           <meta name="og:description" content={description || siteDescription} />
