@@ -36,7 +36,7 @@ export default function Home() {
               <Row className="project">
                 <Col>
                   <Link href={"/projects/inhale"}>
-                    <img className="project-image" src="/images/projects/inhale/main-cover2.png"></img>
+                    <img className="project-image" src="/images/projects/inhale/main-cover.png"></img>
                   </Link>
                   <h4>Inhale</h4>
                 </Col>
@@ -47,6 +47,40 @@ export default function Home() {
                   <h4>Federated Learning Research for Mozilla</h4>
                 </Col>
               </Row> */}
+            </Col>
+          </Row>
+
+          <Row className="work-wrapper">
+            <Col>
+              <h2>Work</h2>  
+
+              <Link href={"/projects/inhale"}>
+                <Row className="work-experience">
+                  <Col>
+                    <h4>Intuit</h4>
+                    <span className="job-title">Software Engineer II</span>
+                  </Col>
+                </Row>
+              </Link>
+
+              <Link href={"/projects/inhale"}>
+                <Row className="work-experience">
+                  <Col>
+                    <h4>Google</h4>
+                    <span className="job-title">Software Engineering Intern</span>
+                  </Col>
+                </Row>
+              </Link>
+
+              <Link href={"/projects/inhale"}>
+                <Row className="work-experience">
+                  <Col>
+                    <h4>University of Alberta</h4>
+                    <span className="job-title">3 Positions</span>
+                  </Col>
+                </Row>
+              </Link>
+
             </Col>
           </Row>
         </main>
