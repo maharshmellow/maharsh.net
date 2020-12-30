@@ -1,24 +1,23 @@
 import renderToString from "next-mdx-remote/render-to-string";
 import hydrate from "next-mdx-remote/hydrate";
 import matter from "gray-matter";
-import { getAllProjectIds, getProjectData } from '../../lib/projects';
+import { getAllWorkIds, getWorkData } from '../../lib/work';
 import Layout from '../../components/layout';
+import WorkExpCard from "../../components/workExpCard";
 
-const components = {};
+const components = {WorkExpCard};
 
-// gets the list of all valid paths (IDs of each post)
 export async function getStaticPaths() {
-  const paths = getAllProjectIds()
+  const paths = getAllWorkIds()
   return {
     paths,
     fallback: false
   }
 }
 
-// gets the post data given the ID
 export async function getStaticProps({ params }) {
-  const projectData = await getProjectData(params.id);
-  const { data, content } = matter(projectData);
+  const workData = await getWorkData(params.id);
+  const { data, content } = matter(workData);
   const mdxSource = await renderToString(content, {
     components,
     scope: data
@@ -32,7 +31,7 @@ export async function getStaticProps({ params }) {
   };
 }
 
-export default function Project({ source, frontMatter }) {
+export default function Work({ source, frontMatter }) {
   const content = hydrate(source, { components });
 
   return (

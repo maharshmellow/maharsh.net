@@ -78,26 +78,18 @@ body {
 
     h5 {
         font-size: 16px;
-        font-weight: 600;
+        font-weight: 500;
         line-height: 1.1em;
         letter-spacing: -0.05em;
         margin-top: 20px;
-
-        @media screen and (max-width: 576px) {
-            font-size: 14px;
-        }
     }
 
     h6 {
         font-size: 14px;
-        font-weight: 600;
+        font-weight: 500;
         line-height: 1.1em;
         letter-spacing: -0.05em;
         margin-top: 20px;
-
-        @media screen and (max-width: 576px) {
-            font-size: 12px;
-        }
     }
 
     pre {
@@ -220,8 +212,8 @@ body {
         }
     }
 
-    // actual blog post
-    .project-page {
+    // common styling for work, projects, and blog
+    .page {
         margin-right: auto;
         margin-left: auto;
         padding-bottom: 5em;
@@ -244,12 +236,12 @@ body {
             }
         }
 
-        .project-banner {
+        .banner {
             min-height: 40vh;
             margin-top: 20vh;
             margin-bottom: 10vh;
             
-            .project-cover {
+            .cover {
                 margin-top: 5vh;
             }
         }
@@ -278,5 +270,31 @@ body {
         }
     }
 
+    .work-experience-card {
+        padding-top: 70px;
+
+        .title, .date, .location {
+            margin-top: 0px;
+            line-height: 0.8em;
+        }
+
+        .date {
+            color: #A9A9A9;
+
+            @media screen and (min-width: 576px) {
+                text-align: right;
+                float: right;
+                margin-top: 0.2em;
+            }
+        }
+
+        .location {
+            color: #A9A9A9;
+        }
+
+        .bullets {
+           margin-top: 5px;
+        }
+    }
 }
                 

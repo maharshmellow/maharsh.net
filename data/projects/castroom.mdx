@@ -36,10 +36,10 @@ The `discovery` folder is further split into `master` and `crawler`. The `crawle
 | *This was the Datadog dashboard while crawling with 7 instances on GKE* |
 
 ### API 
-The API is provided by a simple Express server running on Heroku. Its first purpose is to allow the user to query the data from the Elasticsearch instance. When the correct podcast is found, the `/feed` endpoint is used to get the RSS feed for the podcast. While this could be done from the browser for most podcasts, some feeds don't allow CORS so the request has to get proxied by the server first. 
+The API is provided by a simple Express server running on Heroku. Its main purpose is to allow the user to query the data from the Elasticsearch instance. When the correct podcast is found, the `/feed` endpoint is used to get the RSS feed for the podcast. While this could be done from the browser for most podcasts, some feeds don't allow CORS so the request has to get proxied by the server first. 
 
 ### Web 
-The Web folder contains a React app that is shown to the users at [castroom.web.app](https://castroom.web.app). Here users can run some demo searches against the crawled database. Since the aim of this project wasn't to create a user-faced product, the webpage is pretty bare in functionality. 
+The Web folder contains a React app that is shown to the users at [castroom.web.app](https://castroom.web.app). Here users can run some demo searches against the crawled database. Since the aim of this project wasn't to create a user-facing product, the webpage is pretty bare in functionality. 
 
 | ![Search Results](/images/projects/castroom/search_results.png) | 
 |:--:| 

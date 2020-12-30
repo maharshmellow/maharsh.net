@@ -54,7 +54,7 @@ export default function Home() {
             <Col>
               <h2>Work</h2>  
 
-              <Link href={"/projects/inhale"}>
+              <Link href={"/work/intuit"}>
                 <Row className="work-experience">
                   <Col>
                     <h4>Intuit</h4>
@@ -63,7 +63,7 @@ export default function Home() {
                 </Row>
               </Link>
 
-              <Link href={"/projects/inhale"}>
+              <Link href={"/work/google"}>
                 <Row className="work-experience">
                   <Col>
                     <h4>Google</h4>
@@ -72,7 +72,7 @@ export default function Home() {
                 </Row>
               </Link>
 
-              <Link href={"/projects/inhale"}>
+              <Link href={"/work/uofa"}>
                 <Row className="work-experience">
                   <Col>
                     <h4>University of Alberta</h4>
