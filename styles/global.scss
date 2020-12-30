@@ -238,8 +238,8 @@ body {
 
         .banner {
             min-height: 40vh;
-            margin-top: 20vh;
-            margin-bottom: 10vh;
+            margin-top: 30vh;
+            // margin-bottom: 10vh;
             
             .cover {
                 margin-top: 5vh;
@@ -271,7 +271,9 @@ body {
     }
 
     .work-experience-card {
-        padding-top: 70px;
+        &:not(:first-child) {
+            margin-top: 70px;
+        }
 
         .title, .date, .location {
             margin-top: 0px;
@@ -294,6 +296,10 @@ body {
 
         .bullets {
            margin-top: 5px;
+
+           li {
+               margin-bottom: 8px;
+           }
         }
     }
 }
