@@ -1,11 +1,14 @@
 import { default as BSNavbar } from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
+import Link from "next/link";
 
 export default function Navbar() {
   return(
     <div className="navbar-wrapper">
       <BSNavbar collapseOnSelect expand="sm">
-        <BSNavbar.Brand className="logo">maharsh.</BSNavbar.Brand>
+        <BSNavbar.Brand className="logo">
+          <Link href={"/"}>maharsh.</Link>
+        </BSNavbar.Brand>
         <BSNavbar.Toggle aria-controls="responsive-navbar-nav" />
         <BSNavbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto"></Nav>

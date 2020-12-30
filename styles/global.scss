@@ -120,6 +120,12 @@ body {
                 font-weight: 600;
                 font-size: 1.0em;
                 letter-spacing: -0.05em;
+                cursor: pointer;
+                
+                a {
+                    color: black;
+                    text-decoration: none;
+                }
             }
             padding: 0 !important;
     
