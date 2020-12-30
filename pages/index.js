@@ -58,7 +58,7 @@ export default function Home() {
                 <Row className="work-experience">
                   <Col>
                     <h4>Intuit</h4>
-                    <span className="job-title">Software Engineer II</span>
+                    <span className="job-title">Software Developer II</span>
                   </Col>
                 </Row>
               </Link>
