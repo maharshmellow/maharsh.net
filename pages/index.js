@@ -43,6 +43,14 @@ export default function Home() {
                 </Row>
               </Link>
               
+              <Row className="view-more-link">
+                <Col>
+                  <a href="https://www.github.com/maharshmellow">
+                    <h5>View my other projects on Github &#8599;</h5>
+                  </a>
+                </Col>
+              </Row>
+              
             </Col>
           </Row>
 
@@ -54,7 +62,7 @@ export default function Home() {
                 <Row className="work-experience">
                   <Col>
                     <h4>Intuit</h4>
-                    <span className="job-title">Software Developer II</span>
+                    <h5>Software Developer II</h5>
                   </Col>
                 </Row>
               </Link>
@@ -63,7 +71,7 @@ export default function Home() {
                 <Row className="work-experience">
                   <Col>
                     <h4>Google</h4>
-                    <span className="job-title">Software Engineering Intern</span>
+                    <h5>Software Engineering Intern</h5>
                   </Col>
                 </Row>
               </Link>
@@ -72,7 +80,7 @@ export default function Home() {
                 <Row className="work-experience">
                   <Col>
                     <h4>University of Alberta</h4>
-                    <span className="job-title">Summer Research Intern</span>
+                    <h5>Summer Research Intern</h5>
                   </Col>
                 </Row>
               </Link>
