@@ -46,7 +46,7 @@ export default function Home() {
               <Row className="view-more-link">
                 <Col>
                   <a href="https://www.github.com/maharshmellow">
-                    <h5>View my other projects on Github &#8599;</h5>
+                    <h5>View more &#8599;</h5>
                   </a>
                 </Col>
               </Row>

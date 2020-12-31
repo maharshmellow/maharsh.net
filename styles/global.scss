@@ -12,20 +12,23 @@
          url('/fonts/euclid-circular-A/EuclidCircularA-Semibold-WebXL.woff') format('woff'); /* Pretty Modern Browsers */
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
 html,
 body {
     padding: 0;
     margin: 0;
     font-family: "euclid", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif;
 
-    ::-moz-selection { /* Code for Firefox */
+    // text selection highlight colour
+    ::-moz-selection {
         color: black;
-        background: rgb(255, 255, 135);
+        background: rgba(0, 234, 255, 0.3);
       }
       
     ::selection {
         color: black;
-        background: rgb(255, 255, 135);
+        background: rgba(0, 234, 255, 0.3);
     }
 
     h1 {
@@ -258,7 +261,7 @@ body {
 
         a {
             color: #1966ff;
-            font-weight: bold;
+            font-weight: 700;
             text-decoration: none;
 
             &:hover {
