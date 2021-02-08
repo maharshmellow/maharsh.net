@@ -54,6 +54,22 @@ export default function Home() {
             </Col>
           </Row>
 
+          <Row className="blog-wrapper">
+            <Col>
+              <h2>Blog</h2>  
+
+              <Link href={"/blog/alfred-workflow-python"}>
+                <Row className="blog-article">
+                  <Col>
+                    <h4>How to create an Alfred Workflow using Python</h4>
+                    <h5>Feb 8, 2021</h5>
+                  </Col>
+                </Row>
+              </Link>
+
+            </Col>
+          </Row>
+
           <Row className="work-wrapper">
             <Col>
               <h2>Work</h2>  

@@ -208,6 +208,26 @@ body {
         }
     }
 
+    .blog-wrapper {
+        margin-top: 120px;
+
+        .blog-article {
+            margin-top: 10px;
+            line-height: 5px;
+            cursor: pointer;
+            
+            h4 {
+                margin-bottom: 4px;
+            }
+            
+            h5 {
+                color: #8d8d8d;
+                margin-top: 0px;
+                letter-spacing: -0.5px;
+            }
+        }
+    }
+
     .work-wrapper {
         margin-top: 120px;
 
@@ -273,9 +293,16 @@ body {
             min-height: 40vh;
             margin-top: 30vh;
             
+            .date {
+                font-size: 12px;
+                margin-top: 15px;
+                margin-bottom: 20px;
+                margin-left: 2px;
+                color: #8d8d8d;
+            }
             .coverImage {
                 margin-top: 5vh;
-                margin-bottom: 3vh;
+                margin-bottom: 5vh;
             }
         }
 

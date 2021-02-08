@@ -44,10 +44,16 @@ export default function Blog({ source, frontMatter }) {
         <div className="banner">
           <h1 className="title">{frontMatter.title}</h1> 
           {
+            frontMatter.date ?
+                <div className="date">{frontMatter.date}</div>
+            : null
+          }
+          {
             frontMatter.cover ?
               <img className="coverImage" src={`${frontMatter.cover}`} alt="Cover Image"/>
             : null
           }
+          
         </div>
         
         <div className="content">

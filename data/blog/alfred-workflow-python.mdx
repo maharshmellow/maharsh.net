@@ -1,10 +1,11 @@
 ---
 title: How to create an Alfred Workflow using Python
+date: "Maharsh Patel / February 08, 2021"
 cover: /images/blog/alfred-workflow-python/banner-min.png
-date: "2021-02-07"
+
 --- 
 
-Alfred is a Mac based app that can help increase your productivity through instant searches, hotkeys, snippets, and more. This article will be focused on one core feature: workflows. Using workflows, you can enable quick access to third party apps, or even create custom flows to help with repetitive tasks. If you can do something with code, you can do it with workflows. 
+[Alfred](https://www.alfredapp.com/) is a Mac based app that can help increase your productivity through instant searches, hotkeys, snippets, and more. This article will be focused on one core feature: workflows. Using workflows, you can enable quick access to third party apps, or even create custom flows to help with repetitive tasks. If you can do something with code, you can do it with workflows. 
 
 
 What you'll need to complete this tutorial:
@@ -37,7 +38,7 @@ We want to be able to type "play invisible things" into Alfred to get a list of 
 
 #### Script
 
-In the script section, type in what is required to run your Python script. For now just write `python3 song.py "{query}"` Alfred will pass in the input as {query} so we can use that as part of our bash script and pass it to our Python file. If you would like to work with another language, you can replace the script with whatever you would write in a terminal to execute your program. 
+In the script section, type in what is required to run your Python script. For now just write `python3 song.py "{query}"` Alfred will pass in the input as `{query}` so we can use that as part of our bash script and pass it to our Python file. If you would like to work with another language, you can replace the script with whatever you would write in a terminal to execute your program. 
 
 <img src="/images/blog/alfred-workflow-python/script-filter-min.png" alt="Script Filter Dialog"/>
 
@@ -112,7 +113,7 @@ For more fields that can be used, look at the [Alfred Docs](https://www.alfredap
 
 ### Step 4: Opening the Song in Apple Music
 
-The last step remaining is to actually open the song in Apple Music. In the last section we talked about the `arg` parameter. This will get passed to any connected workflow objects. We can simple create a new workflow object by Right clicking and going to Actions > Open Url. Set the URL to {query} and then connect the 2 blocks together  
+The last step remaining is to actually open the song in Apple Music. In the last section we talked about the `arg` parameter. This will get passed to any connected workflow objects. We can simple create a new workflow object by Right clicking and going to **Actions > Open Url**. Set the URL to `{query}` and then connect the 2 blocks together  
 
 <img src="/images/blog/alfred-workflow-python/open-url-min.png" alt="Open Url Action"/>
 <img src="/images/blog/alfred-workflow-python/final-objects-min.png" alt="Final Workflow Objects"/>
@@ -125,4 +126,4 @@ Now you can test out your workflow by opening up Alfred and typing "play" follow
 
 This tutorial covered a basic workflow example using Alfred. In this case, it allowed us to run our Python script in a quicker way, and also allowed us to see the results. The same learnings can be applied to many other applications. For example, you can create a workflow where you type in a stock ticker symbol and it can give you the current stock price. Or you can create a workflow that interacts with Jira and lets you update the status of a ticket without opening up the website. Alfred allows for very powerful workflows that can help speed up parts of your life. 
 
-If you have questions about this article, feel free to reach out to me via email.
+If you have questions about this article, feel free to reach out to me via [email](mailto:contact@maharsh.net).
