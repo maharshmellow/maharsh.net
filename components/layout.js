@@ -5,7 +5,7 @@ import Container from "react-bootstrap/Container";
 export const siteTitle = "Maharsh Patel - Software Engineer"
 export const siteDescription = "Software Engineer, Serial Hobbyist, Minimalist"
 
-export default function Layout({ children, home, title, description }) {
+export default function Layout({ children, home, title, description, date }) {
   return (
     <div className="base-container">
       <Container fluid={true}>
@@ -22,6 +22,11 @@ export default function Layout({ children, home, title, description }) {
           <meta property="og:image" content="/images/banner.png" />
           <meta property="twitter:image" content="/images/banner.png" />
           <meta name="twitter:card" content="summary_large_image" />
+          <meta property="og:site_name" content="Maharsh Patel" />
+          {
+            date &&
+              <meta property="article:published_time" content={date} />
+          }
         </Head>
         <header>
           <NavBar />

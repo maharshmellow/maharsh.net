@@ -38,14 +38,15 @@ export default function Blog({ source, frontMatter }) {
   return (
     <Layout 
       title={`${frontMatter.title} - Maharsh Patel`}
-      description={frontMatter.description}>
+      description={frontMatter.description}
+      date={frontMatter.date}>
 
       <article className="page">
         <div className="banner">
           <h1 className="title">{frontMatter.title}</h1> 
           {
-            frontMatter.date ?
-                <div className="date">{frontMatter.date}</div>
+            frontMatter.subtitle ?
+                <div className="subtitle">{frontMatter.subtitle}</div>
             : null
           }
           {
