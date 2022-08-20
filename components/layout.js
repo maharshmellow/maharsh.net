@@ -3,7 +3,7 @@ import NavBar from "../components/navbar"
 import Container from "react-bootstrap/Container";
 
 export const siteTitle = "Maharsh Patel - Software Engineer"
-export const siteDescription = "Software Engineer, Serial Hobbyist, Minimalist"
+export const siteDescription = "Software Engineer"
 
 export default function Layout({ children, home, title, description, date }) {
   return (
