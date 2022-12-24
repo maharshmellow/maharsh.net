@@ -61,7 +61,7 @@ export default function Home() {
               <Link href={"/blog/alfred-workflow-python"}>
                 <Row className="blog-article">
                   <Col>
-                    <h4>How to create an Alfred Workflow using Python</h4>
+                    <h4>Create a simple Alfred Workflow using Python</h4>
                     <h5>Feb 8, 2021</h5>
                   </Col>
                 </Row>
