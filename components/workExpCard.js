@@ -2,7 +2,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
 export default function WorkExpCard(props) {
-  return(
+  return (
     <div className="work-experience-card">
       <Row className="experience-heading">
         <Col sm={7} xs={12}>
@@ -20,20 +20,12 @@ export default function WorkExpCard(props) {
       <Row>
         <Col>
           <ul className="bullets">
-            {
-              props.bullets.map((item) => <li>{item}</li> )
-            }
+            {props.bullets.map((item) => (
+              <li>{item}</li>
+            ))}
           </ul>
         </Col>
       </Row>
-
-      {/* <Row>
-        <Col xs={12}>
-          <div className="workDescription">
-            <ReactMarkdown source={props.description}/>
-          </div>
-        </Col>
-      </Row> */}
     </div>
-  )
+  );
 }

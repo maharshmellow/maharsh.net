@@ -1,6 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import "../styles/global.scss"
-import Script from 'next/script';
+import "../styles/global.scss";
+import Script from "next/script";
 
 export default function App({ Component, pageProps }) {
   return (
