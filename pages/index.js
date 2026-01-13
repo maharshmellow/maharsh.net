@@ -20,7 +20,7 @@ export default function Home() {
             <h1>
               I’m Maharsh. <br />
               A Software Engineer based in <br />
-              Edmonton, Canada <br />
+              New York <br />
             </h1>
           </Col>
         </Row>
