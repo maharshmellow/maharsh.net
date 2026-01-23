@@ -215,6 +215,13 @@ const ToolsWrapper = styled.section`
   gap: 24px;
   font-family: "Inter", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     sans-serif;
+
+  @media screen and (max-width: 640px) {
+    margin-top: 24px;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+  }
 `;
 
 const Header = styled.div`
@@ -244,12 +251,21 @@ const TextArea = styled.textarea`
   resize: vertical;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
     "Liberation Mono", "Courier New", monospace;
+
+  @media screen and (max-width: 640px) {
+    border-radius: 8px;
+    padding: 12px;
+  }
 `;
 
 const Actions = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
+
+  @media screen and (max-width: 640px) {
+    gap: 10px;
+  }
 `;
 
 const ActionButton = styled.button`
@@ -284,6 +300,10 @@ const TableWrapper = styled.div`
   border: 1px solid #e7e7e7;
   border-radius: 12px;
   overflow: visible;
+
+  @media screen and (max-width: 640px) {
+    border-radius: 8px;
+  }
 `;
 
 const Table = styled.table`
@@ -298,6 +318,10 @@ const Table = styled.table`
   thead th:last-child {
     border-top-right-radius: 12px;
   }
+
+  @media screen and (max-width: 640px) {
+    display: block;
+  }
 `;
 
 const Th = styled.th`
@@ -306,6 +330,11 @@ const Th = styled.th`
   background: #f8f8f8;
   border-bottom: 1px solid #e7e7e7;
   font-weight: 600;
+
+  @media screen and (max-width: 640px) {
+    display: block;
+    padding: 12px;
+  }
 `;
 
 const Td = styled.td`
@@ -314,11 +343,23 @@ const Td = styled.td`
   vertical-align: top;
   color: #2e2e2e;
   word-break: break-word;
+
+  @media screen and (max-width: 640px) {
+    display: block;
+    padding: 10px 12px;
+  }
 `;
 
 const FieldCell = styled(Td)`
   white-space: nowrap;
   width: 320px;
+
+  @media screen and (max-width: 640px) {
+    width: 100%;
+    white-space: normal;
+    border-bottom: none;
+    padding-bottom: 4px;
+  }
 `;
 
 const FieldLabel = styled.div`
