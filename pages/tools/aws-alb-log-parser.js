@@ -407,6 +407,9 @@ const TooltipContent = styled.span`
   pointer-events: none;
   transition: opacity 0.15s ease;
   z-index: 10;
+  white-space: normal;
+  word-break: break-word;
+  overflow-wrap: anywhere;
 
   ${TooltipWrapper}:hover & {
     opacity: 1;
