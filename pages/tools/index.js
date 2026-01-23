@@ -9,6 +9,12 @@ const tools = [
     description: "A simple stateful counter with plus and minus controls.",
     badge: "Sample",
   },
+  {
+    slug: "aws-alb-log-parser",
+    title: "AWS ALB Log Parser",
+    description: "Paste an ALB access log line to parse fields instantly.",
+    badge: "Utility",
+  },
 ];
 
 const ToolsWrapper = styled.section`

@@ -12,9 +12,14 @@ export default function Layout({
   description,
   date,
   hideNav,
+  noBottomPadding,
 }) {
+  const containerClassName = noBottomPadding
+    ? "base-container no-bottom-padding"
+    : "base-container";
+
   return (
-    <div className="base-container">
+    <div className={containerClassName}>
       <Container fluid={true}>
         <Head>
           <title>{title || siteTitle}</title>
