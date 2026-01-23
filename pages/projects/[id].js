@@ -1,5 +1,5 @@
-import renderToString from "next-mdx-remote/render-to-string";
-import hydrate from "next-mdx-remote/hydrate";
+import { MDXRemote } from "next-mdx-remote";
+import { serialize } from "next-mdx-remote/serialize";
 import matter from "gray-matter";
 import { getAllProjectIds, getProjectData } from "../../lib/projects";
 import Layout from "../../components/layout";
@@ -19,7 +19,7 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   const projectData = await getProjectData(params.id);
   const { data, content } = matter(projectData);
-  const mdxSource = await renderToString(content, {
+  const mdxSource = await serialize(content, {
     components,
     scope: data,
   });
@@ -33,8 +33,6 @@ export async function getStaticProps({ params }) {
 }
 
 export default function Project({ source, frontMatter }) {
-  const content = hydrate(source, { components });
-
   return (
     <Layout
       title={`Maharsh Patel - ${frontMatter.title}`}
@@ -52,7 +50,9 @@ export default function Project({ source, frontMatter }) {
           ) : null}
         </div>
 
-        <div className="content">{content}</div>
+        <div className="content">
+          <MDXRemote {...source} components={components} />
+        </div>
       </article>
     </Layout>
   );
