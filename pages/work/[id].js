@@ -1,6 +1,7 @@
 import { MDXRemote } from "next-mdx-remote";
-import { serialize } from "next-mdx-remote/serialize";
+import { serialize } from "next-mdx-remote/serialize.js";
 import matter from "gray-matter";
+import remarkGfm from "remark-gfm";
 import { getAllWorkIds, getWorkData } from "../../lib/work";
 import Layout from "../../components/layout";
 import WorkExpCard from "../../components/workExpCard";
@@ -21,6 +22,9 @@ export async function getStaticProps({ params }) {
   const mdxSource = await serialize(content, {
     components,
     scope: data,
+    mdxOptions: {
+      remarkPlugins: [remarkGfm],
+    },
   });
 
   return {

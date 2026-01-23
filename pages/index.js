@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Layout from "../components/layout";
@@ -88,7 +87,7 @@ export default function Home() {
               <Row className="work-experience">
                 <Col>
                   <h4>Intuit</h4>
-                  <h5>Software Developer II</h5>
+                  <h5>Software Engineer</h5>
                 </Col>
               </Row>
             </Link>
