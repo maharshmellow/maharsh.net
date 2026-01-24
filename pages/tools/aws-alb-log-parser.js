@@ -362,6 +362,11 @@ const FieldCell = styled(Td)`
   }
 `;
 
+const ValueCell = styled(Td)`
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+`;
+
 const FieldLabel = styled.div`
   display: inline-flex;
   align-items: center;
@@ -580,7 +585,7 @@ export default function AwsAlbLogParser() {
                         </TooltipWrapper>
                       </FieldLabel>
                     </FieldCell>
-                    <Td>{row.value}</Td>
+                    <ValueCell>{row.value}</ValueCell>
                   </tr>
                 ))}
               </tbody>
