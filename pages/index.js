@@ -64,6 +64,21 @@ export default function Home() {
           </Col>
         </Row>
 
+        <Row className="tools-wrapper">
+          <Col>
+            <h2>Tools</h2>
+
+            <Link href={"/tools/aws-alb-log-parser"}>
+              <Row className="tool-entry">
+                <Col>
+                  <h4>AWS ALB Log Parser</h4>
+                  <h5>Local parser for AWS Load Balancer logs</h5>
+                </Col>
+              </Row>
+            </Link>
+          </Col>
+        </Row>
+
         <Row className="blog-wrapper">
           <Col>
             <h2>Blog</h2>
@@ -78,6 +93,8 @@ export default function Home() {
             </Link>
           </Col>
         </Row>
+
+        
 
         <Row className="work-wrapper">
           <Col>
